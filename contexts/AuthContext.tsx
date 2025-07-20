@@ -48,7 +48,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
 
     // Special admin account
     if (email === "admin@simple_todo.app" && password === "password!") {
-      const adminUser = { id: "admin-001", email: "admin@sentinel.ai" };
+      const adminUser = { id: "admin-001", email: "admin@simple_todo.app" };
       setUser(adminUser);
       localStorage.setItem("user", JSON.stringify(adminUser));
       return;
