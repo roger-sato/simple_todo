@@ -46,11 +46,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
       throw new Error("Email and password are required");
     }
 
+    console.log("Logging in with email:", email);
+    console.log("Logging in with password:", password);
     // Special admin account
     if (email === "admin@example.com" && password === "password!") {
       const adminUser = { id: "admin-001", email: "admin@example.com" };
       setUser(adminUser);
       localStorage.setItem("user", JSON.stringify(adminUser));
+      console.log("Admin user logged in");
       return;
     }
 
